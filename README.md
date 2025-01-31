@@ -1,0 +1,3 @@
+This repository contains a demonstration of a common error in Solidity smart contracts: emitting an event before updating the contract's state.  The `bug.sol` file shows the problematic code, while `bugSolution.sol` provides a corrected version.
+
+The issue arises from emitting the `OwnershipTransferred` event before updating the `_owner` variable. This inconsistency can lead to unexpected behavior in applications relying on event logs to track contract state changes.  The corrected version ensures the state is updated before event emission.
